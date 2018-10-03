@@ -11,12 +11,12 @@ from enum import Enum
 
 
 class Gender(Enum):
-    Male = 1
+    Male = 1,
     Female = 2
 
 
 class EyeColour(Enum):
-    Brown = 1
+    Brown = 1,
     Blue = 2
 
 
@@ -34,13 +34,37 @@ class HairStyle(Enum):
     Bald = 3
 
 
-# Face Cards/Mystery Cards (one unique Face Card per board)
+class FacialHair(Enum):
+    NA = 1,
+    Moustache = 2,
+    Beard = 3
 
+
+class Accessory(Enum):
+    NA = 1,
+    Glasses = 2,
+    Hat = 3,
+    Earrings = 4,
+    Bows = 5
+
+
+class Countenance(Enum):
+    Happy = 1,
+    Sad = 2
+
+
+# Face Cards/Mystery Cards (one unique Face Card per board)
+# TODO: Save card data as JSON and import
 card1 = {
     "Name": "Alex",
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Black,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.Moustache,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card2 = {
@@ -48,6 +72,11 @@ card2 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Blue,
     HairColour: HairColour.Ginger,
+    HairStyle: HairStyle.Long,
+    FacialHair: FacialHair.Moustache,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card3 = {
@@ -55,6 +84,11 @@ card3 = {
     Gender: Gender.Female,
     EyeColour: EyeColour.Blue,
     HairColour: HairColour.Blond,
+    HairStyle: HairStyle.Long,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Bows,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": True
 }
 
 card4 = {
@@ -62,6 +96,11 @@ card4 = {
     Gender: Gender.Female,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Black,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Earrings,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card5 = {
@@ -69,6 +108,11 @@ card5 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Brown,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Hat,
+    Countenance: Countenance.Sad,
+    "RosyCheeks": False
 }
 
 card6 = {
@@ -76,6 +120,11 @@ card6 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Ginger,
+    HairStyle: HairStyle.Bald,
+    FacialHair: FacialHair.Beard,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": True
 }
 
 card7 = {
@@ -83,6 +132,11 @@ card7 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Blond,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.Moustache,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card8 = {
@@ -90,6 +144,11 @@ card8 = {
     Gender: Gender.Female,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Ginger,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: [Accessory.Hat, Accessory.Glasses],
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card9 = {
@@ -97,6 +156,11 @@ card9 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Blond,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.Beard,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card10 = {
@@ -104,6 +168,11 @@ card10 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Blond,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Hat,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card11 = {
@@ -111,6 +180,11 @@ card11 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Ginger,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card12 = {
@@ -118,6 +192,11 @@ card12 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.White,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Hat,
+    Countenance: Countenance.Sad,
+    "RosyCheeks": False
 }
 
 card13 = {
@@ -125,6 +204,11 @@ card13 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Ginger,
+    HairStyle: HairStyle.Bald,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card14 = {
@@ -132,6 +216,11 @@ card14 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Blond,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Glasses,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card15 = {
@@ -139,6 +228,11 @@ card15 = {
     Gender: Gender.Female,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Brown,
+    HairStyle: HairStyle.Long,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Hat,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card16 = {
@@ -146,6 +240,11 @@ card16 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Black,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.Moustache,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card17 = {
@@ -153,6 +252,11 @@ card17 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.White,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Glasses,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card18 = {
@@ -160,6 +264,11 @@ card18 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Blue,
     HairColour: HairColour.White,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card19 = {
@@ -167,6 +276,11 @@ card19 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Black,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.Beard,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": True
 }
 
 card20 = {
@@ -174,6 +288,11 @@ card20 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.Brown,
+    HairStyle: HairStyle.Bald,
+    FacialHair: [FacialHair.Moustache, FacialHair.Beard],
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card21 = {
@@ -181,6 +300,11 @@ card21 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Blue,
     HairColour: HairColour.Brown,
+    HairStyle: HairStyle.Short,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Sad,
+    "RosyCheeks": True
 }
 
 card22 = {
@@ -188,6 +312,11 @@ card22 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.White,
+    HairStyle: HairStyle.Bald,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Glasses,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 card23 = {
@@ -195,6 +324,11 @@ card23 = {
     Gender: Gender.Female,
     EyeColour: EyeColour.Brown,
     HairColour: HairColour.White,
+    HairStyle: HairStyle.Long,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.NA,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": True
 }
 
 card24 = {
@@ -202,6 +336,11 @@ card24 = {
     Gender: Gender.Male,
     EyeColour: EyeColour.Blue,
     HairColour: HairColour.Black,
+    HairStyle: HairStyle.Bald,
+    FacialHair: FacialHair.NA,
+    Accessory: Accessory.Glasses,
+    Countenance: Countenance.Happy,
+    "RosyCheeks": False
 }
 
 cards = [
@@ -213,5 +352,3 @@ cards = [
 board1 = cards
 board2 = cards
 mysteryCards = cards
-
-

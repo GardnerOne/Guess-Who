@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# PyCharm Editor
+.idea/
+.idea/workspace.xml
